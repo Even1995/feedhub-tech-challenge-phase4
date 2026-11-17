@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: feedback-service
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
+
+feedhub:
+  security:
+    jwt-secret: ${JWT_SECRET:feedhub-default-secret-change-me-in-production-0123456789}
+  dynamodb:
+    avaliacoes-table: ${AVALIACOES_TABLE:avaliacoes}
+    endpoint: ${DYNAMODB_ENDPOINT:}
+  sns:
+    critical-topic-arn: ${SNS_CRITICAL_TOPIC_ARN:}
+
+logging:
+  level:
+    com.feedhub: INFO

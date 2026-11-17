@@ -1,0 +1,17 @@
+spring:
+  main:
+    web-application-type: none
+  application:
+    name: report-service
+
+feedhub:
+  dynamodb:
+    avaliacoes-table: ${AVALIACOES_TABLE:avaliacoes}
+    endpoint: ${DYNAMODB_ENDPOINT:}
+  notification:
+    sender-email: ${SES_SENDER_EMAIL:no-reply@feedhub.com}
+    recipient-email: ${REPORT_RECIPIENT_EMAIL:admin@feedhub.com}
+
+logging:
+  level:
+    com.feedhub: INFO

@@ -1,0 +1,14 @@
+spring:
+  main:
+    web-application-type: none
+  application:
+    name: notification-service
+
+feedhub:
+  notification:
+    sender-email: ${SES_SENDER_EMAIL:no-reply@feedhub.com}
+    recipient-email: ${NOTIFICATION_RECIPIENT_EMAIL:even.leah@gmail.com}
+
+logging:
+  level:
+    com.feedhub: INFO
