@@ -18,8 +18,7 @@ env:
 jobs:
   terraform:
     runs-on: ubuntu-latest
-    environment: prod
-
+    
     defaults:
       run:
         working-directory: ${{ env.TF_WORKING_DIR }}
